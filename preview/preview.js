@@ -1125,10 +1125,6 @@
     }
 
     if (item.type === "button") {
-      if (item.iconAlign) {
-        const v = String(item.iconAlign).toLowerCase();
-        item.iconAlign = v === "left" ? "Left" : "Right";
-      }
       if (item.justify) {
         const v = String(item.justify).toLowerCase();
         item.justify = v === "center" ? "Center" : v === "left" ? "Left" : v === "right" ? "Right" : "Between";
