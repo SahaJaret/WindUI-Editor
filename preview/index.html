@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WindUI Offline Preview</title>
+  <link rel="stylesheet" href="./preview.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <div class="hero">
+      <div>
+        <div class="hero-title">WindUI Offline Preview</div>
+        <div class="hero-sub">UI builder + preview. No Roblox required.</div>
+      </div>
+      <div class="hero-actions">
+        <button class="button small" id="copy-lua">Copy Lua</button>
+        <button class="button small" id="download-lua">Download Lua</button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar-group">
+        <div class="toolbar-title">Editor</div>
+        <button class="button small" id="zoom-out">-</button>
+        <div class="toolbar-zoom" id="zoom-label">100%</div>
+        <button class="button small" id="zoom-in">+</button>
+        <button class="button small" id="zoom-reset">Reset</button>
+        <button class="button small" id="zoom-fit">Fit</button>
+      </div>
+      <div class="toolbar-group">
+        <button class="button small" id="copy-lua">Copy Lua</button>
+        <button class="button small" id="download-lua">Download Lua</button>
+      </div>
+    </div>
+
+    <div class="editor-layout">
+      <aside class="editor-left">
+        <div class="side-tabs">
+          <button class="side-tab active" data-tab="add">Add</button>
+          <button class="side-tab" data-tab="structure">Structure</button>
+        </div>
+
+        <div class="side-panel active" data-panel="add">
+          <div class="panel">
+            <div class="panel-title">Palette</div>
+            <div id="palette" class="panel-body"></div>
+          </div>
+        </div>
+
+        <div class="side-panel" data-panel="structure">
+          <div class="panel">
+            <div class="panel-title">Structure</div>
+            <div class="panel-actions">
+              <button class="button small" id="add-tab">Add Tab</button>
+              <button class="button small" id="add-section">Add Section</button>
+              <select class="input select" id="add-type"></select>
+              <button class="button small" id="add-item">Add Element</button>
+              <button class="button small" id="duplicate-item">Duplicate</button>
+              <button class="button small" id="move-up">Move Up</button>
+              <button class="button small" id="move-down">Move Down</button>
+              <button class="button small danger" id="delete-item">Delete</button>
+            </div>
+            <input class="input" id="structure-filter" placeholder="Filter by text..." />
+            <div id="structure" class="panel-body"></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="preview-center">
+        <div class="preview-header">Live Preview</div>
+        <div class="canvas" id="canvas">
+          <div class="canvas-inner" id="canvas-inner">
+            <div class="canvas-item" id="canvas-item">
+              <div class="window" id="window">
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="mac-controls">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="title" id="window-title">Window</div>
+        </div>
+        <div class="topbar-center" id="window-tags"></div>
+        <div class="topbar-right"></div>
+      </div>
+
+      <div class="window-body">
+        <aside class="sidebar">
+          <div class="searchbar" id="searchbar">
+            <div class="search-input">Search</div>
+          </div>
+          <div class="tabs" id="tabs"></div>
+        </aside>
+        <main class="mainbar">
+          <div class="panel-bg"></div>
+          <div class="content" id="content"></div>
+        </main>
+      </div>
+    </div>
+            </div>
+          </div>
+        </div>
+        <button class="open-button" id="open-button">Open UI</button>
+        <div class="hint">Tip: click elements in the preview to select them for editing.</div>
+      </section>
+
+      <aside class="editor-right">
+        <div class="panel">
+          <div class="panel-title">Properties</div>
+          <div id="properties" class="panel-body"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="./preview-data.js"></script>
+  <script src="./preview.js"></script>
+</body>
+</html>
