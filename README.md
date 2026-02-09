@@ -1,42 +1,27 @@
-<!--<h1 align="center">WindUI</h1> -->
+# WindUI Editor (Offline Preview)
 
-<!--
-<picture>
-    <source srcset="docs/banner-dark.webp" media="(prefers-color-scheme: dark)">
-    <source srcset="docs/banner-light.webp" media="(prefers-color-scheme: light)">
-    <img src="docs/banner-light.webp" alt="WindUI Banner">
-</picture>-->
+This repository provides an offline editor and preview for WindUI layouts. It renders a WindUI-like UI in the browser without launching Roblox, lets you edit properties, and exports Lua code compatible with WindUI.
 
-<img src="docs/banner-new.webp" alt="WindUI Banner">
+**Key Features**
+1. WYSIWYG preview of WindUI layout.
+2. Structure panel for selecting and reordering elements.
+3. Properties panel with validation and typed inputs.
+4. Lua export (WindUI API style).
 
-> [!WARNING]
-> This WindUI was not inspired by, and the name has nothing to do with UI Frameworks
+**Quick Start**
+1. Open `preview/index.html` in a browser.
+2. Edit elements in the preview or in the Structure panel.
+3. Use **Copy Lua** or **Download Lua** to export.
 
+**Project Layout**
+1. `preview/index.html` UI for the editor.
+2. `preview/preview.js` app logic.
+3. `preview/preview.css` styles.
+4. `preview/preview-data.js` sample data for initial layout.
 
- 
-> [!WARNING] 
-> WindUI is currently in Beta.
-> This project is still under active development. Bugs, issues, and unstable features may occur. We’re constantly working on improvements, so please be patient and report any problems you encounter.
+**Notes**
+1. Icon rendering is disabled in this build (offline-only).
+2. If you need the original WindUI library, see the upstream repository.
 
-
-
-## Credits
-#### Colorpicker script
-- [Dawid-Scripts](https://github.com/dawid-scripts) (Fluent)
-
-#### Icons (https://github.com/Footagesus/Icons)
-- [Lucide-Icons](https://github.com/lucide-icons/lucide) 
-- [Craft Icons](https://www.figma.com/community/file/1415718327120418204)
-- [Geist Icons](https://vercel.com/geist/icons)
-- [Solar Icons](https://icones.js.org/collection/solar)
-- [SF Symbols](https://sf-symbols-one.vercel.app/)
-
-
-### Links
-- [Discord Server](https://discord.gg/ftgs-development-hub-1300692552005189632)
-- [Documentation](https://Footagesus.github.io/WindUI-Docs/)
-- [Installation](https://footagesus.github.io/WindUI-Docs/docs/installation)
-- [Example](/main_example.lua) (wip)
-  ```luau
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/Footagesus/WindUI/refs/heads/main/main_example.lua'))()
-  ```
+**Upstream**
+WindUI by Footagesus: https://github.com/Footagesus/WindUI
